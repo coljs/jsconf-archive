@@ -1,0 +1,632 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>JSConf Colombia 2016 | Medellín, October 7 - 8TH 2016</title><link rel="shortcut icon" href="favicon.f600741c6cff.ico"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="description" content="JSConf Colombia 2016. Medellín, October 7 to 8TH 2016"><link href="css/css.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="css/screen.0a3a09e16392.css"><script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-41987684-1', 'jsconf.co'); ga('send', 'pageview'); </script></head><body class=""><header class="main-header "><svg id="logo" viewbox="0 0 959 959" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="cuerpo" fill="#D52329" points="425.208252 668.64929 632.287402 286.771561 811.874727 316.669214 858.244407 372.284662"/><polygon id="ala-derecha" fill="#FDE881" points="701.710912 296.657305 365.246188 68.1703057 226.386885 149.372544 443.51703 475.536572 701.710912 477.436135"/><polygon id="sombra-ala-derecha" fill="#E3CF54" points="366.363875 68.1703057 0 280.790393 176.901601 70.7207969"/><polygon id="ala-izquierda" fill="#FDE881" points="847.968238 0.0111899563 811.322488 316.259825 701.919711 298.144378 652.315698 263.735262"/><polygon id="sombra-ala-izq" fill="#E3CF54" points="848.216954 0.651883188 958.700108 174.469091 833.888657 119.640693"/><polygon id="cabeza" fill="#BF1F25" points="810.952533 316.873908 912.109346 331.2936 912.109346 437.986422"/><polygon id="cola" fill="#1D3E72" points="428.14781 665.43559 264.15488 958.63155 575.133884 747.063592 547.826294 584.454421"/><polygon id="pico" fill="#E3CF54" points="911.778237 437.183508 859.530976 447.570722 889.790406 410.42996"/></svg><div class="main-video-wrapper"><video id="main-video" class="main-video" autoplay loop><source src="https://s3-us-west-2.amazonaws.com/davsket/jsconfco-intro.webm" type="video/webm"><source src="https://s3-us-west-2.amazonaws.com/davsket/jsconfco-intro.mp4" type="video/mp4"></video><div class="main-header__over"></div></div><script>
+    var __vid = document.querySelector('#main-video');
+    __vid.oncanplay = function(){ __vid.style.opacity = 1 };
+  </script><div class="main-header__content"><a class="main-header__content__link" href="/"><svg class="main-header__logo" viewbox="0 0 137 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: sketchtool 3.8.3 (29802) - http://www.bohemiancoding.com/sketch --><title>JSConf</title><defs><g id="logotipo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-652.000000, -135.000000)" fill="#F4DC4C"><g transform="translate(-300.000000, -241.000000)"><g transform="translate(952.000000, 376.000000)"><path d="M62.9157885,103.938011 C62.9157885,106.082226 62.2104545,108.282868 56.7934898,108.282868 C50.8122579,108.282868 49.7401503,105.659026 49.5990835,105.461532 C49.5990835,105.630813 48.6398293,103.260891 48.6398293,103.260891 L39.8090482,107.887881 C40.7118757,111.696685 45.1413729,118.496104 56.7934898,118.496104 C68.4456067,118.496104 72.9879573,110.709217 72.9879573,104.022651 L72.9879573,64.1571763 L62.9157885,64.1571763 L62.9157885,103.938011 L62.9157885,103.938011 Z" id="Shape"/><path d="M103.09161,86.4175158 C102.019503,85.9378887 101.003822,85.5146883 100.016354,85.0632746 C92.9065881,81.790525 92.9065881,79.2513228 92.9065881,78.2920686 C92.9065881,75.6682263 93.6119221,72.649397 99.1417403,72.649397 C102.950544,72.649397 105.856519,77.2763878 105.856519,77.3328145 L110.201377,74.7936122 L114.60266,72.25441 C111.440835,66.6037433 105.631507,62.9397247 99.1699536,62.5208015 C89.2670649,62.5208015 82.8344193,68.6995269 82.8344193,78.2638553 C82.8344193,87.8281837 92.5680278,92.737308 95.7843506,94.232616 C96.912885,94.7686698 98.097846,95.2482968 99.2263803,95.7279239 C105.630813,98.4081929 107.464681,99.6495807 107.464681,102.66841 C107.464681,108.480362 102.132356,109.129269 99.8188609,109.129269 C93.1040816,109.129269 88.251384,102.132356 88.1949573,102.075929 L79.7309499,107.718601 C80.0977236,108.198228 87.6306902,119.229651 99.7342208,119.229651 C110.173163,119.229651 117.480423,112.402019 117.480423,102.724837 C117.53685,92.4833878 109.157482,88.9849314 103.09161,86.4175158 L103.09161,86.4175158 Z" id="Shape"/><path d="M136.806573,136.806573 L136.806573,0 L0,0 L0,136.806573 L136.806573,136.806573 L136.806573,136.806573 Z M9.50790167,9.50790167 L127.326885,9.50790167 L127.326885,127.326885 L9.50790167,127.326885 L9.50790167,9.50790167 L9.50790167,9.50790167 Z" id="Shape"/></g></g></g></g></defs><use xlink:href="#logotipo"/></svg><h1>JSConf Colombia</h1><p class="main-header__place-and-date">Medellin <span class="brake-small">/</span> October 7 - 8th 2016</p></a><a class="main-header__buy" href="https://ti.to/colombia-dev/jsconfco" target="_blank">Buy Your Ticket Now</a><a href="/#speakers" class="main-header__continue">Know the Speakers 
+      <svg class="down-icon" width="19px" height="10px" viewbox="0 0 19 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><polyline id="path-1" points="82.6923882 33.6923882 82.6923882 46.6923882 69.6923882 46.6923882"/><mask id="mask-2" maskcontentunits="userSpaceOnUse" maskunits="objectBoundingBox" x="0" y="0" width="13" height="13" fill="white"><use xlink:href="#path-1"/></mask></defs><g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Landing-Speaker-small" transform="translate(-711.000000, -671.000000)" stroke="#1D3E72" stroke-width="6"><g id="Landing-section" transform="translate(-300.000000, -241.000000)"><g id="Link-speakers" transform="translate(944.000000, 872.000000)"><use id="Arrow-down" mask="url(#mask-2)" transform="translate(76.192388, 40.192388) rotate(45.000000) translate(-76.192388, -40.192388) " xlink:href="#path-1"/></g></g></g></g></svg></a></div></header><section class="content speakers" id="speakers"><h2 class="main__title">Speakers</h2><div class="speakers__list"><div class="speaker" data-speaker-info="{
+  "name":"Giovanny Beltran", 
+  "image":"/media/cache/68/20/6820295abe0128cf7248b1e20f7882de_cGGWXMw.jpg",
+  "imageSmall":"/media/cache/29/77/2977994b210a12dd3d757aea58d33147_cKjgdGL.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EDesarrollador de software en \u003Ca href\u003D\u0022http://new.miroculus.com/\u0022\u003EMiroculus\u003C/a\u003E, coorganizador de \u003Ca href\u003D\u0022bogotajs.com\u0022\u003EBogotajs\u003C/a\u003E, y cofundador de \u003Ca href\u003D\u0022https://www.youtube.com/c/juegosindies\u0022\u003Ejuegos indies\u003C/a\u003E (comunidad de desarrolladores de juegos en Colombia) le gusta la programación gráfica y el desarrollo de videojuegos.\u003C/p\u003E",
+  "twitter":"agar3s",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Mi experiencia haciendo un videojuego de 13kilobytes en JavaScript",
+    "description": "\u003Cp\u003EHacer un videojuego en solo 13 Kilobytes de JavaScript puede parecer imposible, sin embargo existe un concurso anual donde desarrolladores de todo el mundo intentan superar este reto.\u003C/p\u003E\u000A\u000A\u003Cp\u003EComo desarrollador de JavaScript y aficionado a los videojuegos participé en este concurso para poner a pruebas mis habilidades y ver hasta donde podía llegar, en esta presentación expondría los diferentes retos a los que me enfrenté y como los fui solucionando.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "10:30"
+  }
+  
+  
+  , "workshop": {
+    "name": "Técnicas para reducir código de juegos en JS",
+    "description": "\u003Cp\u003ERevisaremos en detalle las diferentes técnicas y estrategias que se pueden usar para reducir código en el desarrollo de juegos hechos con JavaScript, seguiremos el reto de los 13Kilobytes como ejemplo práctico.                                          \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "14:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/f6e4dd2563d312cc21ca4bff756f3c9e_RKUD6y7.jpg" alt="Giovanny Beltran" width="184" height="137"></div><h3 class="speaker__name">Giovanny Beltran</h3><p class="speaker__talk">Mi experiencia haciendo un videojuego de 13kilobytes en JavaScript</p><a class="speaker__twitter" target="_blank" href="//twitter.com/agar3s"><span class="icon-twitter"></span> @agar3s</a></div><div class="speaker" data-speaker-info="{
+  "name":"Evangelina Ferreira", 
+  "image":"/media/cache/84/1d/841d50fb3690deae2e5d161e46e8e474_NIcTcrq.jpg",
+  "imageSmall":"/media/cache/e9/00/e900bc54c41c0512fb1c4edbd80cf5ce_LI3xDNa.jpg",
+  "aka":"",
+  "job":"Universidad Tecnológica Nacional de Argentina",
+  "country":"Argentina",
+  "about":"\u003Cp\u003EEvangelina Ferreira es una desarrolladora Front\u002Dend, docente en la Universidad Tecnológica Nacional de Argentina y coorganizadora de CSSConf Argentina.\u003C/p\u003E",
+  "twitter":"evaferreira92",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "¿Animar? ¡Si yo no sé dibujar!",
+    "description": "\u003Cp\u003EEstamos en 2016 y ya superamos la muerte de Flash, el problema ahora es saber elegir qué tecnología utilizar para un proyecto animado. ¿JS? ¿CSS? ¿GIF? ¿AfterEffects? La cantidad de opciones no ayuda, ¡confunde!\u000A\u000AEn esta charla les voy a contar cómo enfrentar un proyecto de animación desde la idea hasta la realización. Cómo podemos unir distintas técnicas de animación tradicionales y llevarlas a nuestros navegadores. \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "12:35"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/ddb6c0c6280286def0af21035e5ccba9_SQx4ny1.jpg" alt="Evangelina Ferreira" width="184" height="137"></div><h3 class="speaker__name">Evangelina Ferreira</h3><p class="speaker__talk">¿Animar? ¡Si yo no sé dibujar!</p><a class="speaker__twitter" target="_blank" href="//twitter.com/evaferreira92"><span class="icon-twitter"></span> @evaferreira92</a></div><div class="speaker" data-speaker-info="{
+  "name":"Tracy Hinds", 
+  "image":"/media/cache/e4/0f/e40f7d1f3546c64a1cc01dac8ff26f30_YEv77FY.jpg",
+  "imageSmall":"/media/cache/43/26/43267efedd368f3e10cb2cda7ee020c7_21ZothF.jpg",
+  "aka":"",
+  "job":"The Node.js Foundation",
+  "country":"USA",
+  "about":"\u003Cp\u003ETracy HindsEducation Community Manager, Node Foundation\u003C/p\u003E\u000A\u000A\u003Cp\u003ETracy is the Node.js Foundation Education Community Manager by day, and a JavaScript Engineer scheming about the next conference she’s organizing outside of work by most other hours—she loves people as much as code. When not baking, rock climbing, or wandering the city, you can find her at one of the amazing meetups in NYC. If you’re building tech communities that are supportive to all walks of life, she’d love to speak with you!\u003C/p\u003E",
+  "twitter":"HackyGoLucky",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "**It Takes a (global &amp;&amp; inclusive &amp;&amp; diverse) Village**",
+    "description": "\u003Cp\u003EConflict is healthy. Honestly! We need stability. We need healthy collaboration. Disagreement is important to folks being able to share their varied perspectives.  This enables us to consider as many speed bumps and barriers to progressing before we arrive at the solution. We just have to be disagreeing towards a path, whether that’s in community or code. We can still disagree towards a direction of success.\u003C/p\u003E\u000A\u000A\u003Cp\u003ENode.js is 7 years old now. Let’s take a look at how it came to be, how the fork/conflict was great for us, how the Node.js Foundation(what the heck IS the foundation?) is a large collaboration to grow and maintain the health of the project, and how flawed we are in all of these efforts(spoiler alert: it’s how we become better). Let’s talk about how we are fixing it even though other communities look to us as examples, and how every facet of the project has to step up in order to make all of these changes a success.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "17:20"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/9b20875cd48c7af147ee409a1b49b0ef_RUk85YB.jpg" alt="Tracy Hinds" width="184" height="137"></div><h3 class="speaker__name">Tracy Hinds</h3><p class="speaker__talk">**It Takes a (global &amp;&amp; inclusive &amp;&amp; diverse) Village**</p><a class="speaker__twitter" target="_blank" href="//twitter.com/HackyGoLucky"><span class="icon-twitter"></span> @HackyGoLucky</a></div><div class="speaker" data-speaker-info="{
+  "name":"Mariko Kosaka", 
+  "image":"/media/cache/fc/f6/fcf621deb992a05b3f4582417288507b_mcArRaK.jpg",
+  "imageSmall":"/media/cache/4a/84/4a846d8cc438121b68ae9f266348cd73_4CXZnRN.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003EMariko is an engineer who loves data and knitting. When she is not making software at Scripto, she uses code to help her design textiles \u0026amp\u003B organize a local JavaScript meetup in New York City called BrooklynJS.\u003C/p\u003E",
+  "twitter":"kosamari",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "How to be a Compiler",
+    "description": "\u003Cp\u003ELearning a new language is like training your brain to be a compiler. But what does a compiler do? and how can we make one?\u000ALet\u0027s write a small compiler together. Once you write a compiler, you\u0027ll not only understand how your JavaScript code is run under the hood, but also be better at making inclusive environment for people who are learning unfamiliar language.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "09:20"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/d8974c44b2c41807b437ef4059c7b999_6xfNlTk.jpg" alt="Mariko Kosaka" width="184" height="137"></div><h3 class="speaker__name">Mariko Kosaka</h3><p class="speaker__talk">How to be a Compiler</p><a class="speaker__twitter" target="_blank" href="//twitter.com/kosamari"><span class="icon-twitter"></span> @kosamari</a></div><div class="speaker" data-speaker-info="{
+  "name":"Mike North", 
+  "image":"/media/cache/ae/ea/aeeaf39ac8301df353901608733a056c_9r2Kb4d.jpg",
+  "imageSmall":"/media/cache/71/6f/716f10ee099e7e3633d97fef26c9885f_zNh6LKx.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003EMike is the CTO of \u003Ca href\u003D\u0022http://levantofinancial.com\u0022\u003ELevanto Financial\u003C/a\u003E, and was formerly the UI Architect of \u003Ca href\u003D\u0022https://yahoo.com\u0022\u003EYahoo\u003C/a\u003E Ads \u0026amp\u003B Data. He has been an avid open source contributor to the JavaScript community for several years, and is a true believer in the business value of Open Source Software. Mike works mostly with JavaScript, Elixir and Swift these days, but realized that he loved programming while writing C code for urban search and rescue robots.\u003C/p\u003E",
+  "twitter":"michaellnorth",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "The Road to Native Web Components",
+    "description": "\u003Cp\u003EOne of the major challenges of building rich applications for the web, is that our foundation (JavaScript in the browser) is a document viewer, not an application platform. In fact, if you show a mobile or desktop app developer the primitives we are given to start with, the typical reaction is that we\u0027re missing many important building blocks.\u003C/p\u003E\u000A\u000A\u003Cp\u003EAll of the tools we rely on like Angular 2, React, Ember, Polymer, etc... all are, essentially, shims and hacks that we make use of while we wait for things like the W3C Web Component spec to be completed and implemented in browsers. As it becomes more feasible to build on the standards instead of a framework, it becomes important for developers to have awareness of what those standards are, what\u0027s missing from the official spec, and how well of a job our favorite libraries do with establishing alignment.\u003C/p\u003E\u000A\u000A\u003Cp\u003EWe\u0027\u0027ll take a close look at the W3C component spec, and compare it to the concept of a Component in the React.js library, the and the Ember.js 2 and Angular 2 frameworks. We\u0027ll try to do a few things using native web components, involving rendering and styling an encapsulated piece of interactive UI. Along the way, we will highlight the things that we\u0027re waiting in the W3C spec, which we\u0027d need to land before we can start decoupling our apps from a specific third party tool, and rely on Native Web Components.\u0022   \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "09:55"
+  }
+  
+  
+  , "workshop": {
+    "name": "Zero to sixty with ember.js",
+    "description": "\u003Cp\u003EEmber is an opinionated web framework, that aligns with the web standards of tomorrow, and aims to supercharge developer productivity by reducing the number of decisions they have to make. \u003C/p\u003E\u000A\u000A\u003Cp\u003EWe\u0027ll build a small app using ember and ember\u0027s world\u002Dclass build tool: ember\u002Dcli. Concepts we will touch on include interacting with APIs, performance, animation, and modular application design. \u003C/p\u003E\u000A\u000A\u003Cp\u003EAttendees will leave with an appreciation for the benefit of aligning conventions and opinions across a large developer community. \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "09:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/b3f506b253759d384ae2276f4fde2156_PXIAXas.jpg" alt="Mike North" width="184" height="137"></div><h3 class="speaker__name">Mike North</h3><p class="speaker__talk">The Road to Native Web Components</p><a class="speaker__twitter" target="_blank" href="//twitter.com/michaellnorth"><span class="icon-twitter"></span> @michaellnorth</a></div><div class="speaker" data-speaker-info="{
+  "name":"Bonnie Michelle Milián Barrios", 
+  "image":"/media/cache/98/10/9810dd44f5bfed871314a6c41b94daf1_VlmiUzy.jpg",
+  "imageSmall":"/media/cache/38/7e/387ef944c020e518350163229f978793_4KaECVL.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Guatemala",
+  "about":"\u003Cp\u003EI\u0027m Bonnie Milián a woman Developer and Maker, from Guatemala, on my work in Innovation Lab (Universidad Galileo) I develop projects combining Software and Hardware, and aid on workshops.  I\u0027m currently studying 3rd year of Systems Engineering and Computer Science (Universidad Galileo).\u003C/p\u003E",
+  "twitter":"BonnieMilianB",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "JavaScript got me flying through the air",
+    "description": "\u003Cp\u003E\u0022Drones are so cool, striking and trendy that I thought that something involving them and JS can\u0027t go wrong, right? XD During this talk, I\u0027ll share a project that aims to control a drone with a simple interface, how I decided on Intel Edison and Johnny Five as the building blocks, why the control is built for a glove/gauntlet, my struggle during the process and how everyone either beginner or seasoned developers can build projects involving hardware using node.js\u003C/p\u003E\u000A\u000A\u003Cp\u003ENodeJS + Intel Edison + ARDrone 2.0\u003C/p\u003E\u000A\u000A\u003Cp\u003EOrder of the Talk:\u003C/p\u003E\u000A\u000A\u003Cp\u003EFirt will be show a little video or/and a short Flight (Depending on the size of hall auditorium).\u003C/p\u003E\u000A\u000A\u003Cp\u003EExplanation of the project aspects with a Structure/Interaction diagram (graphical).\u003C/p\u003E\u000A\u000A\u003Cp\u003EWhy doing it as a Gauntlet? Explaining the difficulty of the Parrot App with non\u002Dexperienced users.\u003C/p\u003E\u000A\u000A\u003Cp\u003EExplaining some information and features of the tools used in the project, and why they was used. Intel Edison, SparkFun Blocks, Intel XDK IDE, NodeJS, Johnny\u002DFive.\u003C/p\u003E\u000A\u000A\u003Cp\u003EFinal Demostration Flight or Video of the Project.\u003C/p\u003E\u000A\u000A\u003Cp\u003ETips for Developing Projects with NodeJS.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "14:40"
+  }
+  
+  
+  , "workshop": {
+    "name": "Waking Up with Particle Internet Button",
+    "description": "\u003Cp\u003EHW + SW + Wi\u002DFi \u003D IoT user\u002Dfriendly\u003C/p\u003E\u000A\u000A\u003Cp\u003EEn este taller aprenderás a combinar Hardware y Software para desarrollar proyectos IoT user\u002Dfriendly.\u003C/p\u003E\u000A\u000A\u003Cp\u003EUtilizaremos como HW el Particle Internet Button y el Photon. Particle es una empresa que desarrolla \u0022IoT cloud platform and low\u002Dcost connected hardware\u0022 para llevar nuestros proyectos a la industria, proporciona cloud platform para facilitar conectar los dispositivos con la Web. El Photon es un microcontrolador con chip de Wi\u002DFi integrado y procesador ARM Cortex M3.\u003C/p\u003E\u000A\u000A\u003Cp\u003EDe elementos de SW, programaremos el microcontrolador con el lenguaje de Arduino usando el Web IDE de Particle. Y realizaremos una Web/Mobile App con Ionic Framework y AngularJS. Con Ionic puedes programar 1 vez y compilar a diferentes móviles utilizando Cordova, realizar el desarrollo con JS y HTML, y los empodera con AngularJS y ngCordova.\u003C/p\u003E\u000A\u000A\u003Cp\u003EDurante el taller realizaremos un proyecto sencillo y veremos como interconectar HW y SW vía la nube de Particle. Crearemos juntos una alarma\u002Dsimon. Aprovechando el HW del Particle Button que tiene neopixels, pushbuttons, etc.\u003C/p\u003E\u000A\u000A\u003Cp\u003EMás Info sobre los elementos a utilizar:\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022https://www.particle.io/\u0022\u003Ehttps://www.particle.io/\u003C/a\u003E\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022https://www.particle.io/products/hardware/photon\u002Dwifi\u002Ddev\u002Dkit\u0022\u003Ehttps://www.particle.io/products/hardware/photon\u002Dwifi\u002Ddev\u002Dkit\u003C/a\u003E\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022http://ionicframework.com/\u0022\u003Ehttp://ionicframework.com/\u003C/a\u003E\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "15:50"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/8b09a66b4c95243cca0cf8f32bcef2a5_EPz0wtl.jpg" alt="Bonnie Michelle Milián Barrios" width="184" height="137"></div><h3 class="speaker__name">Bonnie Michelle Milián Barrios</h3><p class="speaker__talk">JavaScript got me flying through the air</p><a class="speaker__twitter" target="_blank" href="//twitter.com/BonnieMilianB"><span class="icon-twitter"></span> @BonnieMilianB</a></div><div class="speaker" data-speaker-info="{
+  "name":"Erich Oliveira", 
+  "image":"/media/cache/24/74/247495467c90a4a03d5a842ba93ff1c5.jpg",
+  "imageSmall":"/media/cache/6b/c3/6bc36fd5e78612ca142c148829d88195.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Brasil",
+  "about":"\u003Cp\u003EBrazilian with 8+ years of software development. CTO at winnin.com media startup funded by coca\u002Dcola. Worked on big companies and startups mainly with node, scala and Java. Passionate about micro services and functional reactive programming.\u003C/p\u003E",
+  "twitter":"oliveira_erich",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Node Micro Services: From Zero to Hero",
+    "description": "\u003Cp\u003EEver heard of micro service, but you don\u0027t know why it exists? Already tried micro services, but seems to hard to implement?\u003C/p\u003E\u000A\u000A\u003Cp\u003EIn this talk we will take a look at the motivations and advantages of a micro services architecture in comparison with monolithic systems.\u003C/p\u003E\u000A\u000A\u003Cp\u003EWhat is a micro service architecture? \u000AHow can we make our systems more reliable?\u000AHow can we scale?\u000AHow we handle network communication?\u000ACan we do service discovery?\u000AHow can we make distributed system and still focus on developers happiness?\u003C/p\u003E\u000A\u000A\u003Cp\u003EWe will answer all this questions and finish the presentation with a little demo of a distributed systems.\u003C/p\u003E\u000A\u000A\u003Cp\u003EThe mains goal is to make you fell a micro services hero after the presentation\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "11:25"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/93a6fd2f750cd148893615fe72a19941.jpg" alt="Erich Oliveira" width="184" height="137"></div><h3 class="speaker__name">Erich Oliveira</h3><p class="speaker__talk">Node Micro Services: From Zero to Hero</p><a class="speaker__twitter" target="_blank" href="//twitter.com/oliveira_erich"><span class="icon-twitter"></span> @oliveira_erich</a></div><div class="speaker" data-speaker-info="{
+  "name":"Seth Samuel", 
+  "image":"/media/cache/ec/15/ec15c3f5a8259316ec87397f39c39991_HRK36mM.jpg",
+  "imageSmall":"/media/cache/b5/04/b5047a6a3c434dc90e29ab321a7f30bf_bEszIr6.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003ESeth is a full stack developer with 12+ years of experience. He\u0027s survived multiple startups, and has been using WebGL in production since before that was a good idea.\u003C/p\u003E",
+  "twitter":"sethfsamuel",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "WebGL For More Than Graphics: Is It Possible?",
+    "description": "\u003Cp\u003EWebGL is already widely in use for 3D graphics and image processing but could be used for much more. We\u0027ll learn how to pass arbitrary data to the GPU for parallel processing, how to get that processed data back into Javascript, and all the reasons this doesn\u0027t work even when it should.\u003C/p\u003E\u000A\u000A\u003Cp\u003EThis talk starts with a review of WebGL shaders and how data is passed through the WebGL pipeline and processed in parallel. Next I\u0027ll show some examples of traditional image processing using WebGL. After that, I\u0027ll explain how to pass arbitrary data into the GPU and how to retrieve output from those parallel calculations. Finally, there will be an example of this system in action, and then several examples that don\u0027t work as expected with explanations of the limitations of the current WebGL architecture.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "15:50"
+  }
+  
+  
+  , "workshop": {
+    "name": "WebGL: From Boilerplate to Application",
+    "description": "\u003Cp\u003EThis workshop is intended to help anyone with basic Javascript knowledge understand how WebGL works and where it can fit into their applications. We\u0027ll start by stepping through the boilerplate of any WebGL program, to understand how Javascript interacts with WebGL to create graphics. Next we\u0027ll learn about shaders, which underlie the power of WebGL. Finally we\u0027ll look at some practical applications of WebGL that go beyond gaming.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "11:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/106699b6dd606b001f04d8f7653d4cdc_tMMaFaG.jpg" alt="Seth Samuel" width="184" height="137"></div><h3 class="speaker__name">Seth Samuel</h3><p class="speaker__talk">WebGL For More Than Graphics: Is It Possible?</p><a class="speaker__twitter" target="_blank" href="//twitter.com/sethfsamuel"><span class="icon-twitter"></span> @sethfsamuel</a></div><div class="speaker" data-speaker-info="{
+  "name":"Kenneth Auchenberg", 
+  "image":"/media/cache/e6/35/e63585e15be2512f0d38b3b7af9cdee5_6FSTunZ.jpg",
+  "imageSmall":"/media/cache/00/0d/000dcca6af2e478065d24b23b70e4bc0_4VVWztm.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Canada",
+  "about":"\u003Cp\u003EKenneth is a Program Manager, focused on DevTools and Remote Debugging at Microsoft, and is obsessed with tooling. He started the \u003Ca href\u003D\u0022http://remotedebug.org/\u0022\u003ERemoteDebug\u003C/a\u003E project to unify remote debugging and lives in Vancouver, Canada. He’s the organizer of the \u003Ca href\u003D\u0022http://coldfrontconf.com/\u0022\u003EColdFront Conference\u003C/a\u003E in Copenhagen, Denmark. Kenneth blogs occasionally at \u003Ca href\u003D\u0022http://kenneth.io\u0022\u003Ekenneth.io\u003C/a\u003E, and tweets as \u003Ca href\u003D\u0022http://twitter.com/auchenberg\u0022\u003E@auchenberg\u003C/a\u003E\u003C/p\u003E",
+  "twitter":"auchenberg",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "DevTools for the Progressive Web",
+    "description": "\u003Cp\u003EThe web has gained the capabilities to offer app\u002Dlike experience, and with Progressive Web Apps the web is ready to replace many native apps. What does that mean for our developer tools? In this talk I\u0027ll share Microsoft\u0027s view on web tooling and what we do to make building for the web easier and more productive, regardless of the platform.  \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "12:00"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/a4f0684733f3c80f318ef3affc4c38d7_AJKi1qV.jpg" alt="Kenneth Auchenberg" width="184" height="137"></div><h3 class="speaker__name">Kenneth Auchenberg</h3><p class="speaker__talk">DevTools for the Progressive Web</p><a class="speaker__twitter" target="_blank" href="//twitter.com/auchenberg"><span class="icon-twitter"></span> @auchenberg</a></div><div class="speaker" data-speaker-info="{
+  "name":"Jonathan Martin", 
+  "image":"/media/cache/b4/5b/b45b4aecf3014c9330ef9a53a7d24155_tZ8apxK.jpg",
+  "imageSmall":"/media/cache/8e/2f/8e2f8a9af540f5efa2777cb1dcc4a189_pQTxQyR.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003EJonathan is a cheesecake\u002Dloving Developer \u0026amp\u003B Instructor at \u003Ca href\u003D\u0022https://www.bignerdranch.com/\u0022\u003EBig Nerd Ranch\u003C/a\u003E, where he sheds bikes in Rails or bores students with the “wats” of JavaScript in the Ranch’s immersive front\u002Dend bootcamp.\u003C/p\u003E\u000A\u000A\u003Cp\u003EOutside the Ranch, he is a \u003Ca href\u003D\u0022https://www.yellowscale.com/\u0022\u003Elandscape photographer\u003C/a\u003E and classically trained violinist, and is disconcertingly fond of books (he’s been through \u003Cem\u003ELord of the Rings\u003C/em\u003E twenty times).\u003C/p\u003E",
+  "twitter":"nybblr",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Does the network seem thin up here? Collaborating with mountaintop mesh networks.",
+    "description": "\u003Cp\u003EDigital nomads can now work anytime, anywhere but often with \u003Cstrong\u003Eno WiFi.\u003C/strong\u003E Despite the explosion of feature\u002Drich web apps, offline editors like Microsoft Word remain their tool of choice, leaving them out in the cold when it comes to realtime collaboration.\u003C/p\u003E\u000A\u000A\u003Cp\u003EWith the help of \u003Cem\u003EOperational Transforms\u003C/em\u003E + \u003Cem\u003EConflict\u002DFree Replicated Data Types\u003C/em\u003E coupled with a functional reactive architecture, peer\u002Dto\u002Dpeer web apps can enable writers, musicians and other creators to collaborate \u003Cem\u003Eoff\u002Dthe\u002Dgrid\u003C/em\u003E and climb up to the writer\u0027s ultimate dream: \u003Cstrong\u003Ecollaborative writing atop Half Dome.\u003C/strong\u003E\u003C/p\u003E\u000A\u000A\u003Cp\u003E\u003Cem\u003EOh, and we won\u0027t need conference WiFi.\u003C/em\u003E\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "16:45"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/f655cbf55faaf88835c961eb52decee5_o0FmMKk.jpg" alt="Jonathan Martin" width="184" height="137"></div><h3 class="speaker__name">Jonathan Martin</h3><p class="speaker__talk">Does the network seem thin up here? Collaborating with mountaintop mesh networks.</p><a class="speaker__twitter" target="_blank" href="//twitter.com/nybblr"><span class="icon-twitter"></span> @nybblr</a></div><div class="speaker" data-speaker-info="{
+  "name":"Claudia Hernández", 
+  "image":"/media/cache/31/89/31897db5c213903aed9917c31c8f4114_lmQq88U.jpg",
+  "imageSmall":"/media/cache/18/7f/187f83d39c2f7f77fcac2a6a58d4f588_SssPKTV.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Mexico",
+  "about":"\u003Cp\u003EClaudia Hernández is a mexican frontend developer at Dailymotion in Paris. She has previously worked on projects for companies such as Air France, EDF, Groupe SEB and Aéroport de Paris. Claudia has a computer science background and loves learning emerging web technologies. When she is not coding, chances are you’ll find her reading a book ! Claudia also loves travelling and discovering new cultures.\u003C/p\u003E",
+  "twitter":"koste4",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Javascript en el país de las Maravillas",
+    "description": "\u003Cp\u003EWhat even makes sense in Javascript ? \u003C/p\u003E\u000A\u000A\u003Cp\u003EFor a language originally created in 10 days it surely has a lot of quirks and perks many JS developers are unaware of. Sometimes, it might even seem like we fell down the rabbit hole only to find that NaN is actually a Number, undefined can be defined, +!![] equals 1, Array.sort()may not work as you suspected and so much other nonsense that can trip any JS developer\u0027s mind. \u003C/p\u003E\u000A\u000A\u003Cp\u003EThis talk is a collection of Javascript\u0027s oddities and unexpected behaviors that hopefully will prevent some future headaches and help understand the language that we all love in a more deeper and meaningful way.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "15:15"
+  }
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/7c27ce7f289a8be14371ade89c51af0c_HQABDuc.jpg" alt="Claudia Hernández" width="184" height="137"></div><h3 class="speaker__name">Claudia Hernández</h3><p class="speaker__talk">Javascript en el país de las Maravillas</p><a class="speaker__twitter" target="_blank" href="//twitter.com/koste4"><span class="icon-twitter"></span> @koste4</a></div><div class="speaker" data-speaker-info="{
+  "name":"Thorsten Lorenz", 
+  "image":"/media/cache/c4/8b/c48b9ed1e598fec98e5c776ed62ae3e9_qIASJA5.jpg",
+  "imageSmall":"/media/cache/8f/a7/8fa7bffe393656f76eceeed4af8c729e_PIviRh0.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Germany",
+  "about":"\u003Cp\u003EJazz musician turned developer working at NodeSource \u003C/p\u003E",
+  "twitter":"thlorenz",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Memory Profiling for Mere Mortals",
+    "description": "\u003Cp\u003EMemory leaks are rare, but when they occur we need to be equipped to track them down. However not many resources exist\u000Athat explain how to memory profile a Node.js application.\u000AIn this talk I will explain how data is stored in the v8 heap and how to examine it using tools that are readily\u000Aavailable on a developer\u0027s machine and are relatively easy to learn.\u003C/p\u003E\u000A\u000A\u003Cp\u003EAdditionally I\u0027ll show cutting edge features introduced to v8 that ease detection of memory leaks (i.e. memory allocation sampling). We will also discuss how to access these features via the v8 API even before they are exposed via Chrome\u0027s developer tools\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "17:55"
+  }
+  
+  
+  , "workshop": {
+    "name": "Going Native: Learn how to build Node.js Addons via an interactive workshop",
+    "description": "\u003Cp\u003E\u003Cstrong\u003EGoingNative\u003C/strong\u003E is a a \u003Cem\u003ENodeSchool style workshopper for learning how to write native Node.js addons\u003C/em\u003E created by my co\u002Dworker Rod Vagg.\u003C/p\u003E\u000A\u000A\u003Cp\u003EI will provide a quick introduction on what Node.js addons are and how they integrate with C/C++ libraries in a similar manner that Node.js itself does.\u003C/p\u003E\u000A\u000A\u003Cp\u003EI will then guide attendees through this fun workshop and lend help where I can using the experience I gained while developing multiple addons myself and from working with Node.js core.\u003C/p\u003E",
+    "room": "Room 2 ",
+    "time": "15:50"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/4d3b25bc86b0d6f3f8739408d8999e21_BpXMNnA.jpg" alt="Thorsten Lorenz" width="184" height="137"></div><h3 class="speaker__name">Thorsten Lorenz</h3><p class="speaker__talk">Memory Profiling for Mere Mortals</p><a class="speaker__twitter" target="_blank" href="//twitter.com/thlorenz"><span class="icon-twitter"></span> @thlorenz</a></div></div><section class="workshopers"><h2 class="main__title">Workshoppers</h2><div class="speakers__list"><div class="speaker" data-speaker-info="{
+  "name":"Giovanny Beltran", 
+  "image":"/media/cache/68/20/6820295abe0128cf7248b1e20f7882de_Q4mqN23.jpg",
+  "imageSmall":"/media/cache/29/77/2977994b210a12dd3d757aea58d33147_3226fhR.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EDesarrollador de software en \u003Ca href\u003D\u0022http://new.miroculus.com/\u0022\u003EMiroculus\u003C/a\u003E, coorganizador de \u003Ca href\u003D\u0022bogotajs.com\u0022\u003EBogotajs\u003C/a\u003E, y cofundador de \u003Ca href\u003D\u0022https://www.youtube.com/c/juegosindies\u0022\u003Ejuegos indies\u003C/a\u003E (comunidad de desarrolladores de juegos en Colombia) le gusta la programación gráfica y el desarrollo de videojuegos.\u003C/p\u003E",
+  "twitter":"agar3s",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Mi experiencia haciendo un videojuego de 13kilobytes en JavaScript",
+    "description": "\u003Cp\u003EHacer un videojuego en solo 13 Kilobytes de JavaScript puede parecer imposible, sin embargo existe un concurso anual donde desarrolladores de todo el mundo intentan superar este reto.\u003C/p\u003E\u000A\u000A\u003Cp\u003EComo desarrollador de JavaScript y aficionado a los videojuegos participé en este concurso para poner a pruebas mis habilidades y ver hasta donde podía llegar, en esta presentación expondría los diferentes retos a los que me enfrenté y como los fui solucionando.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "10:30"
+  }
+  
+  
+  , "workshop": {
+    "name": "Técnicas para reducir código de juegos en JS",
+    "description": "\u003Cp\u003ERevisaremos en detalle las diferentes técnicas y estrategias que se pueden usar para reducir código en el desarrollo de juegos hechos con JavaScript, seguiremos el reto de los 13Kilobytes como ejemplo práctico.                                          \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "14:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/f6e4dd2563d312cc21ca4bff756f3c9e_SgP5bQq.jpg" alt="Giovanny Beltran" width="184" height="137"></div><h3 class="speaker__name">Giovanny Beltran</h3><p class="speaker__talk">Técnicas para reducir código de juegos en JS</p><a class="speaker__twitter" target="_blank" href="//twitter.com/agar3s"><span class="icon-twitter"></span> @agar3s</a></div><div class="speaker" data-speaker-info="{
+  "name":"Mike North", 
+  "image":"/media/cache/ae/ea/aeeaf39ac8301df353901608733a056c_I0B4W8y.jpg",
+  "imageSmall":"/media/cache/71/6f/716f10ee099e7e3633d97fef26c9885f_amncg8s.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003EMike is the CTO of \u003Ca href\u003D\u0022http://levantofinancial.com\u0022\u003ELevanto Financial\u003C/a\u003E, and was formerly the UI Architect of \u003Ca href\u003D\u0022https://yahoo.com\u0022\u003EYahoo\u003C/a\u003E Ads \u0026amp\u003B Data. He has been an avid open source contributor to the JavaScript community for several years, and is a true believer in the business value of Open Source Software. Mike works mostly with JavaScript, Elixir and Swift these days, but realized that he loved programming while writing C code for urban search and rescue robots.\u003C/p\u003E",
+  "twitter":"michaellnorth",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "The Road to Native Web Components",
+    "description": "\u003Cp\u003EOne of the major challenges of building rich applications for the web, is that our foundation (JavaScript in the browser) is a document viewer, not an application platform. In fact, if you show a mobile or desktop app developer the primitives we are given to start with, the typical reaction is that we\u0027re missing many important building blocks.\u003C/p\u003E\u000A\u000A\u003Cp\u003EAll of the tools we rely on like Angular 2, React, Ember, Polymer, etc... all are, essentially, shims and hacks that we make use of while we wait for things like the W3C Web Component spec to be completed and implemented in browsers. As it becomes more feasible to build on the standards instead of a framework, it becomes important for developers to have awareness of what those standards are, what\u0027s missing from the official spec, and how well of a job our favorite libraries do with establishing alignment.\u003C/p\u003E\u000A\u000A\u003Cp\u003EWe\u0027\u0027ll take a close look at the W3C component spec, and compare it to the concept of a Component in the React.js library, the and the Ember.js 2 and Angular 2 frameworks. We\u0027ll try to do a few things using native web components, involving rendering and styling an encapsulated piece of interactive UI. Along the way, we will highlight the things that we\u0027re waiting in the W3C spec, which we\u0027d need to land before we can start decoupling our apps from a specific third party tool, and rely on Native Web Components.\u0022   \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "09:55"
+  }
+  
+  
+  , "workshop": {
+    "name": "Zero to sixty with ember.js",
+    "description": "\u003Cp\u003EEmber is an opinionated web framework, that aligns with the web standards of tomorrow, and aims to supercharge developer productivity by reducing the number of decisions they have to make. \u003C/p\u003E\u000A\u000A\u003Cp\u003EWe\u0027ll build a small app using ember and ember\u0027s world\u002Dclass build tool: ember\u002Dcli. Concepts we will touch on include interacting with APIs, performance, animation, and modular application design. \u003C/p\u003E\u000A\u000A\u003Cp\u003EAttendees will leave with an appreciation for the benefit of aligning conventions and opinions across a large developer community. \u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "09:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/b3f506b253759d384ae2276f4fde2156_O283jAK.jpg" alt="Mike North" width="184" height="137"></div><h3 class="speaker__name">Mike North</h3><p class="speaker__talk">Zero to sixty with ember.js</p><a class="speaker__twitter" target="_blank" href="//twitter.com/michaellnorth"><span class="icon-twitter"></span> @michaellnorth</a></div><div class="speaker" data-speaker-info="{
+  "name":"Bonnie Michelle Milián Barrios", 
+  "image":"/media/cache/98/10/9810dd44f5bfed871314a6c41b94daf1_osePCjC.jpg",
+  "imageSmall":"/media/cache/38/7e/387ef944c020e518350163229f978793_WX7X0ez.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Guatemala",
+  "about":"\u003Cp\u003EI\u0027m Bonnie Milián a woman Developer and Maker, from Guatemala, on my work in Innovation Lab (Universidad Galileo) I develop projects combining Software and Hardware, and aid on workshops.  I\u0027m currently studying 3rd year of Systems Engineering and Computer Science (Universidad Galileo).\u003C/p\u003E",
+  "twitter":"BonnieMilianB",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "JavaScript got me flying through the air",
+    "description": "\u003Cp\u003E\u0022Drones are so cool, striking and trendy that I thought that something involving them and JS can\u0027t go wrong, right? XD During this talk, I\u0027ll share a project that aims to control a drone with a simple interface, how I decided on Intel Edison and Johnny Five as the building blocks, why the control is built for a glove/gauntlet, my struggle during the process and how everyone either beginner or seasoned developers can build projects involving hardware using node.js\u003C/p\u003E\u000A\u000A\u003Cp\u003ENodeJS + Intel Edison + ARDrone 2.0\u003C/p\u003E\u000A\u000A\u003Cp\u003EOrder of the Talk:\u003C/p\u003E\u000A\u000A\u003Cp\u003EFirt will be show a little video or/and a short Flight (Depending on the size of hall auditorium).\u003C/p\u003E\u000A\u000A\u003Cp\u003EExplanation of the project aspects with a Structure/Interaction diagram (graphical).\u003C/p\u003E\u000A\u000A\u003Cp\u003EWhy doing it as a Gauntlet? Explaining the difficulty of the Parrot App with non\u002Dexperienced users.\u003C/p\u003E\u000A\u000A\u003Cp\u003EExplaining some information and features of the tools used in the project, and why they was used. Intel Edison, SparkFun Blocks, Intel XDK IDE, NodeJS, Johnny\u002DFive.\u003C/p\u003E\u000A\u000A\u003Cp\u003EFinal Demostration Flight or Video of the Project.\u003C/p\u003E\u000A\u000A\u003Cp\u003ETips for Developing Projects with NodeJS.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "14:40"
+  }
+  
+  
+  , "workshop": {
+    "name": "Waking Up with Particle Internet Button",
+    "description": "\u003Cp\u003EHW + SW + Wi\u002DFi \u003D IoT user\u002Dfriendly\u003C/p\u003E\u000A\u000A\u003Cp\u003EEn este taller aprenderás a combinar Hardware y Software para desarrollar proyectos IoT user\u002Dfriendly.\u003C/p\u003E\u000A\u000A\u003Cp\u003EUtilizaremos como HW el Particle Internet Button y el Photon. Particle es una empresa que desarrolla \u0022IoT cloud platform and low\u002Dcost connected hardware\u0022 para llevar nuestros proyectos a la industria, proporciona cloud platform para facilitar conectar los dispositivos con la Web. El Photon es un microcontrolador con chip de Wi\u002DFi integrado y procesador ARM Cortex M3.\u003C/p\u003E\u000A\u000A\u003Cp\u003EDe elementos de SW, programaremos el microcontrolador con el lenguaje de Arduino usando el Web IDE de Particle. Y realizaremos una Web/Mobile App con Ionic Framework y AngularJS. Con Ionic puedes programar 1 vez y compilar a diferentes móviles utilizando Cordova, realizar el desarrollo con JS y HTML, y los empodera con AngularJS y ngCordova.\u003C/p\u003E\u000A\u000A\u003Cp\u003EDurante el taller realizaremos un proyecto sencillo y veremos como interconectar HW y SW vía la nube de Particle. Crearemos juntos una alarma\u002Dsimon. Aprovechando el HW del Particle Button que tiene neopixels, pushbuttons, etc.\u003C/p\u003E\u000A\u000A\u003Cp\u003EMás Info sobre los elementos a utilizar:\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022https://www.particle.io/\u0022\u003Ehttps://www.particle.io/\u003C/a\u003E\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022https://www.particle.io/products/hardware/photon\u002Dwifi\u002Ddev\u002Dkit\u0022\u003Ehttps://www.particle.io/products/hardware/photon\u002Dwifi\u002Ddev\u002Dkit\u003C/a\u003E\u000A\u003Ca target\u003D\u0022_blank\u0022 href\u003D\u0022http://ionicframework.com/\u0022\u003Ehttp://ionicframework.com/\u003C/a\u003E\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "15:50"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/8b09a66b4c95243cca0cf8f32bcef2a5_RL6TDXR.jpg" alt="Bonnie Michelle Milián Barrios" width="184" height="137"></div><h3 class="speaker__name">Bonnie Michelle Milián Barrios</h3><p class="speaker__talk">Waking Up with Particle Internet Button</p><a class="speaker__twitter" target="_blank" href="//twitter.com/BonnieMilianB"><span class="icon-twitter"></span> @BonnieMilianB</a></div><div class="speaker" data-speaker-info="{
+  "name":"Seth Samuel", 
+  "image":"/media/cache/ec/15/ec15c3f5a8259316ec87397f39c39991_ZguF4Nj.jpg",
+  "imageSmall":"/media/cache/b5/04/b5047a6a3c434dc90e29ab321a7f30bf_Np8iZy5.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003ESeth is a full stack developer with 12+ years of experience. He\u0027s survived multiple startups, and has been using WebGL in production since before that was a good idea.\u003C/p\u003E",
+  "twitter":"sethfsamuel",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "WebGL For More Than Graphics: Is It Possible?",
+    "description": "\u003Cp\u003EWebGL is already widely in use for 3D graphics and image processing but could be used for much more. We\u0027ll learn how to pass arbitrary data to the GPU for parallel processing, how to get that processed data back into Javascript, and all the reasons this doesn\u0027t work even when it should.\u003C/p\u003E\u000A\u000A\u003Cp\u003EThis talk starts with a review of WebGL shaders and how data is passed through the WebGL pipeline and processed in parallel. Next I\u0027ll show some examples of traditional image processing using WebGL. After that, I\u0027ll explain how to pass arbitrary data into the GPU and how to retrieve output from those parallel calculations. Finally, there will be an example of this system in action, and then several examples that don\u0027t work as expected with explanations of the limitations of the current WebGL architecture.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "15:50"
+  }
+  
+  
+  , "workshop": {
+    "name": "WebGL: From Boilerplate to Application",
+    "description": "\u003Cp\u003EThis workshop is intended to help anyone with basic Javascript knowledge understand how WebGL works and where it can fit into their applications. We\u0027ll start by stepping through the boilerplate of any WebGL program, to understand how Javascript interacts with WebGL to create graphics. Next we\u0027ll learn about shaders, which underlie the power of WebGL. Finally we\u0027ll look at some practical applications of WebGL that go beyond gaming.\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "11:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/106699b6dd606b001f04d8f7653d4cdc_VioDZ1s.jpg" alt="Seth Samuel" width="184" height="137"></div><h3 class="speaker__name">Seth Samuel</h3><p class="speaker__talk">WebGL: From Boilerplate to Application</p><a class="speaker__twitter" target="_blank" href="//twitter.com/sethfsamuel"><span class="icon-twitter"></span> @sethfsamuel</a></div><div class="speaker" data-speaker-info="{
+  "name":"Thorsten Lorenz", 
+  "image":"/media/cache/c4/8b/c48b9ed1e598fec98e5c776ed62ae3e9_Wfop9eg.jpg",
+  "imageSmall":"/media/cache/8f/a7/8fa7bffe393656f76eceeed4af8c729e_QFVqjU4.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Germany",
+  "about":"\u003Cp\u003EJazz musician turned developer working at NodeSource \u003C/p\u003E",
+  "twitter":"thlorenz",
+  "linkedin":""
+  
+  , "talk": {
+    "name": "Memory Profiling for Mere Mortals",
+    "description": "\u003Cp\u003EMemory leaks are rare, but when they occur we need to be equipped to track them down. However not many resources exist\u000Athat explain how to memory profile a Node.js application.\u000AIn this talk I will explain how data is stored in the v8 heap and how to examine it using tools that are readily\u000Aavailable on a developer\u0027s machine and are relatively easy to learn.\u003C/p\u003E\u000A\u000A\u003Cp\u003EAdditionally I\u0027ll show cutting edge features introduced to v8 that ease detection of memory leaks (i.e. memory allocation sampling). We will also discuss how to access these features via the v8 API even before they are exposed via Chrome\u0027s developer tools\u003C/p\u003E",
+    "room": "Auditorium",
+    "time": "17:55"
+  }
+  
+  
+  , "workshop": {
+    "name": "Going Native: Learn how to build Node.js Addons via an interactive workshop",
+    "description": "\u003Cp\u003E\u003Cstrong\u003EGoingNative\u003C/strong\u003E is a a \u003Cem\u003ENodeSchool style workshopper for learning how to write native Node.js addons\u003C/em\u003E created by my co\u002Dworker Rod Vagg.\u003C/p\u003E\u000A\u000A\u003Cp\u003EI will provide a quick introduction on what Node.js addons are and how they integrate with C/C++ libraries in a similar manner that Node.js itself does.\u003C/p\u003E\u000A\u000A\u003Cp\u003EI will then guide attendees through this fun workshop and lend help where I can using the experience I gained while developing multiple addons myself and from working with Node.js core.\u003C/p\u003E",
+    "room": "Room 2 ",
+    "time": "15:50"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/4d3b25bc86b0d6f3f8739408d8999e21_oIdLTTh.jpg" alt="Thorsten Lorenz" width="184" height="137"></div><h3 class="speaker__name">Thorsten Lorenz</h3><p class="speaker__talk">Going Native: Learn how to build Node.js Addons via an interactive workshop</p><a class="speaker__twitter" target="_blank" href="//twitter.com/thlorenz"><span class="icon-twitter"></span> @thlorenz</a></div><div class="speaker" data-speaker-info="{
+  "name":"Juan Caicedo", 
+  "image":"/media/cache/6c/f9/6cf95d9525a7f8fc779eb787dac6dc40_seHaLPn.jpg",
+  "imageSmall":"/media/cache/99/90/999040e9e17075993a907128959ce2e9_Fgii1He.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EJuan is a Colombian\u002DCanadian\u002DAmerican full\u002Dstack developer at CuriosityMedia, where he works on \u003Ca href\u003D\u0022www.spanishdict.com\u0022\u003ESpanishDict.com\u003C/a\u003E. He loves helping new programmers gets excited about javascript and finds refactoring therapeutic. His favorite video game is Super Smash Brothers 64 (Blue Kirby FTW).\u003C/p\u003E",
+  "twitter":"_juancaicedo",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Building Command Line Applications, the Node Way",
+    "description": "\u003Cp\u003EA program becomes much more powerful when it evolves from a simple script to a\u000A full\u002Dblown command line application. How to build a good CLA is a skill that\u000A every Node developer should have. However, interacting with your logic through a\u000A command prompt is very different from doing it on the web, and it takes\u000A deliberate thought and consideration to do it well. In this workshop, we\u0027ll go through\u000A some techniques I learned from developing and open\u002Dsourcing a tool that enables \u000A publishers to better interact Google\u0027s DFP API. We will cover the basics of how to \u000A use Unix streams, how to fit node scripts into Unix command pipelines, and how \u000A to structure modules for effective use at the command line . Developers will learn \u000A how to leverage their skills and knowledge from web development to towards \u000A creating reusable and distributable CLA\u0027s.\u000A\u000A For this workshop, please go through the following steps: https://github.com/JuanCaicedo/buscar\u002Dissues#antes\u002Dde\u002Dempezar  \u003C/p\u003E",
+    "room": "Room 1",
+    "time": "14:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/da0942420662dc36288aa0097dd57802_ebAf1oA.jpg" alt="Juan Caicedo" width="184" height="137"></div><h3 class="speaker__name">Juan Caicedo</h3><p class="speaker__talk">Building Command Line Applications, the Node Way</p><a class="speaker__twitter" target="_blank" href="//twitter.com/_juancaicedo"><span class="icon-twitter"></span> @_juancaicedo</a></div><div class="speaker" data-speaker-info="{
+  "name":"David Castillo", 
+  "image":"/media/cache/5e/9d/5e9daba0c9f5d0faa0c29fc208eebea4.jpg",
+  "imageSmall":"/media/cache/27/d1/27d1b4db0b26e21fffc248d87089dfe7.jpg",
+  "aka":"",
+  "job":"PSL",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EDavid is a software engineer and part\u002Dtime tinkerer. When he\u0027s not writing software he organizes Medellin DevOps, ScaleConf Colombia, reads books, and takes pictures of his cat, Lola.\u003C/p\u003E",
+  "twitter":"castillobgr",
+  "linkedin":"https://linkedin.com/in/castillobg"
+  
+  
+  , "workshop": {
+    "name": "Let&#39;s make a websockets-based, image-only chat (because why not?)",
+    "description": "\u003Cp\u003EThe world moves fast, and we want our apps to do too! Ever wondered how to implement a chat, a live feed, or live events into your JS app? In this workshop, we\u0027ll use the power and simplicity of Node, Express, and Socket.IO to create a fun, (close to) real\u002Dtime photo chat web app. In the end, you\u0027ll have a solid grasp on what WebSockets are, some ideas on what to look for when handling binary data over WebSockets, and (hopefully) a few experiments in mind to develop on your own!\u003C/p\u003E",
+    "room": "Room 2 ",
+    "time": "09:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/2472ff1f7dd3695046a9156294ef7c72.jpg" alt="David Castillo" width="184" height="137"></div><h3 class="speaker__name">David Castillo</h3><p class="speaker__talk">Let&#39;s make a websockets-based, image-only chat (because why not?)</p><a class="speaker__twitter" target="_blank" href="//twitter.com/castillobgr"><span class="icon-twitter"></span> @castillobgr</a></div><div class="speaker" data-speaker-info="{
+  "name":"Nicolas Molina", 
+  "image":"/media/cache/42/51/4251ef7de5e0e984115df021ada46e9a_xpx5Q0r.jpg",
+  "imageSmall":"/media/cache/1e/2f/1e2f9aca7f20e2f7c609cccc9ebd2b2a_V9WWbei.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EI’m Mobile developer at SponzorMe and author of (ion\u002Dbook)[ion\u002Dbook.com], I’m passionate about web applications and Hybrid Apps, in the moment I’m focused in teach and learn Angular2 \u0026amp\u003B Ionic2 also I’m organizer/leader of Colombian communities like HybridAppsColombia, MeteorBogota and DjangoBogota.\u003C/p\u003E",
+  "twitter":"nicobytes",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Ionic Workshop: Building your first mobile app with IonicV2 / Angular2",
+    "description": "\u003Cp\u003ELet\u0027s meet together for a workshop to build a mobile app with ionicV2 . In this workshop you will learn how to start a new Ionic project, create and style multiple views, add a backend(Firebase), build app for Android or IOS, and use Cordova plugins like Camera, Geolocation etc.\u000A By the end of the workshop, you will have built a useful, mature, mobile app that is ready for app store submission.\u003C/p\u003E",
+    "room": "Room 1",
+    "time": "11:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/23477dbf7c0dfb1c7875b661331631a6_wp7Bhm9.jpg" alt="Nicolas Molina" width="184" height="137"></div><h3 class="speaker__name">Nicolas Molina</h3><p class="speaker__talk">Ionic Workshop: Building your first mobile app with IonicV2 / Angular2</p><a class="speaker__twitter" target="_blank" href="//twitter.com/nicobytes"><span class="icon-twitter"></span> @nicobytes</a></div><div class="speaker" data-speaker-info="{
+  "name":"Joe Sepi", 
+  "image":"/media/cache/56/1c/561c6ba2866f39ec2eede633b11629ab.jpg",
+  "imageSmall":"/media/cache/cb/1b/cb1bc0ccd2b5ab99403a89ac89911e93.jpg",
+  "aka":"",
+  "job":"IBM",
+  "country":"USA",
+  "about":"\u003Cp\u003ELead Dev Evangelist with \u003Ca href\u003D\u0022http://strongloop.com\u0022\u003EStrongLoop\u003C/a\u003E/\u003Ca href\u003D\u0022http://ibm.com\u0022\u003EIBM\u003C/a\u003E and Lead Punk Evangelist with \u003Ca href\u003D\u0022http://leastbestbeast.com\u0022\u003ELeast Best Beast\u003C/a\u003E \u0026amp\u003B \u003Ca href\u003D\u0022http://mustardtiger.rocks\u0022\u003EMustard Tiger\u003C/a\u003E\u003C/p\u003E",
+  "twitter":"joe_sepi",
+  "linkedin":"https://www.linkedin.com/in/joesepi"
+  
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/d2aeb3fb4b02892c3809d44e433002ca.jpg" alt="Joe Sepi" width="184" height="137"></div><h3 class="speaker__name">Joe Sepi</h3><p class="speaker__talk"></p><a class="speaker__twitter" target="_blank" href="//twitter.com/joe_sepi"><span class="icon-twitter"></span> @joe_sepi</a></div><div class="speaker" data-speaker-info="{
+  "name":"Steve Kinney", 
+  "image":"/media/cache/b6/fb/b6fb9afdcb4dee39f3d02d6311cc26b3_0AiQKiO.jpg",
+  "imageSmall":"/media/cache/b2/3e/b23ec17ead5463e22966a8ccda0a149b_S60ZAZM.jpg",
+  "aka":"",
+  "job":"",
+  "country":"USA",
+  "about":"\u003Cp\u003ESteve Kinney is the Director of the Front\u002DEnd Engineering Program and an instructor at the Turing School of Software and Design in Denver, Colorado, USA. He is the author of \u003Ca href\u003D\u0022http://bit.ly/electronjs\u0022\u003EElectron in Action\u003C/a\u003E. He is also the creator and organizer of \u003Ca href\u003D\u0022http://dinosaurjs.org\u0022\u003EDinosaur.js\u003C/a\u003E, a JavaScript conference in Denver.\u003C/p\u003E",
+  "twitter":"stevekinney",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Building Desktop Applications with Electron",
+    "description": "\u003Cp\u003EIn this talk, we\u0027ll explore using Electron to build cross\u002Dplatform desktop using web technologies that wouldn\u0027t otherwise be possible inside of the traditional browser environment. Electron is the underlying foundation for Github\u0027s Atom text editor, Microsoft\u0027s Visual Studio Code IDE, Slack\u0027s desktop applications, and many others. Electron combines Chrome\u0027s content module with Node.js and allows developers full access to the filesystem and native OS APIs. \u003C/p\u003E\u000A\u000A\u003Cp\u003EIn this session, explore a mental model of how Electron applications are structure. We\u0027ll also get our hands dirty and build a number of small applications including a Markdown\u002Dto\u002DHTML note editor, a clipboard manager that lives in the menubar or system tray, and an image resizing tool from the ground up.\u003C/p\u003E",
+    "room": "Room 3",
+    "time": "14:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/b4d64648fafcd306169e5b3e571a25ff_12YN2xb.jpg" alt="Steve Kinney" width="184" height="137"></div><h3 class="speaker__name">Steve Kinney</h3><p class="speaker__talk">Building Desktop Applications with Electron</p><a class="speaker__twitter" target="_blank" href="//twitter.com/stevekinney"><span class="icon-twitter"></span> @stevekinney</a></div><div class="speaker" data-speaker-info="{
+  "name":"Emily Plummer", 
+  "image":"/media/cache/58/04/580460838e818daa5a294f1cc39fef4b.jpg",
+  "imageSmall":"/media/cache/c5/3b/c53b9068c3b53548a54c80a835a0601b.jpg",
+  "aka":"",
+  "job":"Buffer",
+  "country":"USA",
+  "about":"\u003Cp\u003EEmily is a front end developer at Buffer. In her free time she pets cat, grows cut flowers, and hikes mountains. She is from Portland, Oregon USA where she runs \u003Ca href\u003D\u0022http://donutjs.club\u0022\u003EDonut.js\u003C/a\u003E a meetup for javascripters who like donuts and karaoke.\u003C/p\u003E",
+  "twitter":"emplums",
+  "linkedin":"https://www.linkedin.com/in/eplummer26"
+  
+  
+  , "workshop": {
+    "name": "Everyday Accessibility - How to use tools to diagnose and treat accessibility issues in modern web applications.",
+    "description": "\u003Cp\u003EAs more and more of daily life gets moved onto the web, it becomes increasingly important to make sure that users with disabilities are not left behind. Making web applications accessible to all users is often an afterthought, but in this workshop I’ll give you the tools you need to build accessibility into your everyday process.\u003C/p\u003E\u000A\u000A\u003Cp\u003EIn this workshop we will be going over a variety of tools for integrating accessibility testing and development into your daily workflow. I’ll go over the basics of accessibility, how to use a screen reader, and powerful browser extensions and code linters that can make building with accessibility in mind second nature. We’ll also get set up with pa11y, a web accessibility dashboard that allows you to monitor accessibility issues on all your sites in one place. I’ll cover a few libraries that can help automate accessibility in modern applications, and give tips to get buy\u002Din from your company to add accessibility to the road map.\u003C/p\u003E",
+    "room": "Room 1",
+    "time": "09:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/798ebba9800910a31b6e4873f3a20a5c.jpg" alt="Emily Plummer" width="184" height="137"></div><h3 class="speaker__name">Emily Plummer</h3><p class="speaker__talk">Everyday Accessibility - How to use tools to diagnose and treat accessibility issues in modern web applications.</p><a class="speaker__twitter" target="_blank" href="//twitter.com/emplums"><span class="icon-twitter"></span> @emplums</a></div><div class="speaker" data-speaker-info="{
+  "name":"Fernando Montoya", 
+  "image":"/media/cache/24/9b/249b54f8d282d874a05259e3fefd7f2d.jpg",
+  "imageSmall":"/media/cache/d5/bf/d5bf65a40f296f0f48b48e59f9481d50.jpg",
+  "aka":"montogeek",
+  "job":"Mozio Inc",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EFernando is an avid reader with a passion for sharing knowledge. You may find him on twitter as @montogeek.  While not tweeting, he works at Mozio as a frontend developer and helps organize MedellinJS. Recently, he is volunteering his frontend talent to bring to life ScaleConfCo\u0027s web presence\u003C/p\u003E",
+  "twitter":"montogeek",
+  "linkedin":"https://co.linkedin.com/in/montogeek"
+  
+  
+  , "workshop": {
+    "name": "Type your JavaScript with Flow",
+    "description": "\u003Cp\u003EFlow is a static type checker for JavaScript with type inference, letting you find bugs in real\u002Dtime.\u003C/p\u003E\u000A\u000A\u003Cp\u003EWe\u0027ll pick up an existing library and add Flow annotations to it. Next, we will distribute it with its annotations so it could be used in any Flow project.\u003C/p\u003E\u000A\u000A\u003Cp\u003EAttendees will learn how Flow improves JavaScript code quality and developer productivity.\u003C/p\u003E",
+    "room": "Room 2 ",
+    "time": "14:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/2cd71ef223e6789993591c2706601440.jpg" alt="Fernando Montoya" width="184" height="137"></div><h3 class="speaker__name">Fernando Montoya</h3><p class="speaker__talk">Type your JavaScript with Flow</p><a class="speaker__twitter" target="_blank" href="//twitter.com/montogeek"><span class="icon-twitter"></span> @montogeek</a></div><div class="speaker" data-speaker-info="{
+  "name":"Glen Mailer", 
+  "image":"/media/cache/f0/0f/f00f6a5d199f05117b1395a2f0a80151_XO45aVU.jpg",
+  "imageSmall":"/media/cache/85/f0/85f0e440a2c2a58b4c827d5bf389e6bb_R68OSrg.jpg",
+  "aka":"",
+  "job":"",
+  "country":"UK",
+  "about":"\u003Cp\u003EI\u0027m a freelance software engineer from the north of England. I\u0027m interested in tightening the feedback loops we have in our day\u002Dto\u002Dday work, in all forms of the development process. I really don\u0027t like waste.\u003C/p\u003E",
+  "twitter":"glenathan",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Fast and Effective React Testing",
+    "description": "\u003Cp\u003E\u0022Testing frontend applications has always been a bit tricky. Do you test on real browsers, fake browsers, no browser? In the days before single\u002Dpage apps it was common to do your testing using only an HTML parser \u002D but for many of us, those days are behind us.\u003C/p\u003E\u000A\u000A\u003Cp\u003EReact has quietly introduced another testing tool for the toolbox: shallow rendering. This allows us to render a single component in isolation without the overhead of a browser, DOM or really any sort of rendering engine. It\u0027s a really powerful approach, that makes doing even basic testing of UI components extremely cheap.\u003C/p\u003E\u000A\u000A\u003Cp\u003EThis workshop is aimed at people who have some experience of working with React, but want to explore more about unit testing components. I\u0027ll walk attendees through basic use of shallow rendering and then move on to how to use higher level libraries to write tests which aren\u0027t brittle. I\u0027ll show how these tools can be leveraged to provide fast and effective unit tests for your React components, including how to handle some of the thornier cases.\u0022  \u003C/p\u003E",
+    "room": "Room 1",
+    "time": "15:50"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/ced105d50dc49068b1a21333981486b6_5u7pxUr.jpg" alt="Glen Mailer" width="184" height="137"></div><h3 class="speaker__name">Glen Mailer</h3><p class="speaker__talk">Fast and Effective React Testing</p><a class="speaker__twitter" target="_blank" href="//twitter.com/glenathan"><span class="icon-twitter"></span> @glenathan</a></div><div class="speaker" data-speaker-info="{
+  "name":"Miguel Andrés Casas Perea", 
+  "image":"/media/cache/79/c8/79c8fbfd57b368de41a96560d6b7148f.jpg",
+  "imageSmall":"/media/cache/f9/82/f9827b42b954381118ddb89e42fd2d00.jpg",
+  "aka":"neneriostb",
+  "job":"Auth0",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EDesarrollador en el equipo de marketing en Auth0, coorganizador de Hackdo, y coorganizador de Quibdojs (comunidad javascript en Quibdó\u002DChocó) apasionado por la programación, la cultura maker y el sofware libre.\u003C/p\u003E",
+  "twitter":"neneriostb",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Desarrollando Aplicaciones IoT con Johnny-Five y Webtask",
+    "description": "\u003Cp\u003EJohnny\u002DFive es una plataforma de programación robótica e IoT basada en JavaScript, y Webtask es un servicio desarrollado por Auth0 que permite ejecutar código con una llamada HTTP.\u003C/p\u003E\u000A\u000A\u003Cp\u003EEn este workshop construiremos una aplicación IoT usando arduino y un sensor de movimiento donde luego sabremos su estado por medio de notificaciones web y móvil.\u003C/p\u003E",
+    "room": "Room 2 ",
+    "time": "11:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/422d5c92c547d25eda9284099e643fe0.jpg" alt="Miguel Andrés Casas Perea" width="184" height="137"></div><h3 class="speaker__name">Miguel Andrés Casas Perea</h3><p class="speaker__talk">Desarrollando Aplicaciones IoT con Johnny-Five y Webtask</p><a class="speaker__twitter" target="_blank" href="//twitter.com/neneriostb"><span class="icon-twitter"></span> @neneriostb</a></div><div class="speaker" data-speaker-info="{
+  "name":"Ángela Franco y Claudia Dávila", 
+  "image":"/media/cache/0b/b0/0bb0c55e8b18dbdfe970676bd58283c4_KmXX2Fq.jpg",
+  "imageSmall":"/media/cache/49/bd/49bdc73e7d637ae5d8a9194572faf8c0_Dxa1ZT8.jpg",
+  "aka":"",
+  "job":"",
+  "country":"Colombia",
+  "about":"\u003Cp\u003E¿Por qué dos? Porque somos un excelente equipo..!\u000ASomos Ángela y Claudia, ambas desarrolladoras front\u002Dend y compartimos la misma pasión por la programación. Venimos trabajando juntas desde hace 5 años y tenemos experiencia en el desarrollo de sitios web y aplicaciones móviles híbridas.\u003C/p\u003E",
+  "twitter":"@angie_francop @isdclau",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Desarrollando una aplicación móvil nativa con Javascript utilizando Angular 2 y Nativescript",
+    "description": "\u003Cp\u003ENativeScript es un framework open source para crear aplicaciones móviles nativas con JavaScript. En este workshop aprenderás qué es y cómo funciona NativeScript, construiremos una app móvil Android y IOS implementando los plugins y elementos UI nativos, todo esto utilizando habilidades comunes para el desarrollo web como lo son Angular 2, CSS y npm.\u000A\u000ARecomendamos que tengas instalados las siguientes herramientas:\u000A\u002D The latest Node.js 0.10.x, 0.12.x, 4.x, 5.x, or 6.x stable official release\u000A\u002D For Android development\u000A        JDK 8 or a later stable official release\u000A        Android SDK 22 or a later stable official release\u000A        Local Maven repository for Support Libraries\u000A        Android SDK Build\u002Dtools 23.0.3 or a later stable official release\u000A\u000A\u002D For iOS development (for OS X)\u000A        Latest Xcode\u000A        Command\u002Dline tools for Xcode\u000A        xcodeproj ruby gem\u000A        CocoaPods\u003C/p\u003E",
+    "room": "Room 3",
+    "time": "09:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/ce7f7151c88e4e87a7b06da84cd4db2f_uYFzo5O.jpg" alt="Ángela Franco y Claudia Dávila" width="184" height="137"></div><h3 class="speaker__name">Ángela Franco y Claudia Dávila</h3><p class="speaker__talk">Desarrollando una aplicación móvil nativa con Javascript utilizando Angular 2 y Nativescript</p><a class="speaker__twitter" target="_blank" href="//twitter.com/@angie_francop @isdclau"><span class="icon-twitter"></span> @@angie_francop @isdclau</a></div><div class="speaker" data-speaker-info="{
+  "name":"David Roncancio", 
+  "image":"/media/cache/27/b8/27b800b6d563f69943bf6216d92e866d_7AkrRL8.jpg",
+  "imageSmall":"/media/cache/91/af/91af8b120056bf58d4fba230473391ae_hArKYfd.jpg",
+  "aka":"Kuryaki",
+  "job":"Pager",
+  "country":"Colombia",
+  "about":"\u003Cp\u003EBackend Engineer at Pager (pager.com)\u003C/p\u003E",
+  "twitter":"kuryaki",
+  "linkedin":""
+  
+  
+  , "workshop": {
+    "name": "Microservices with node using rabbitmq",
+    "description": "\u003Cp\u003EIn this tutorial we are going to see a learn how to create a queue based architecture for micro services using rabbitmq, we are going to start with the basic producer/consumer pattern and then move forward to publish/subscribe and finish with RPC to demonstrate how these messaging patterns can help us build reliable and robust systems in node.js\u003C/p\u003E\u000A\u000A\u003Cp\u003EMicroservicios con node usando rabbitmq\u003C/p\u003E\u000A\u000A\u003Cp\u003EEn este tutorial vamos a aprender como crear una arquitectura basada en colas para microservicios usando rabbitmq, vamos a empezar con el patron básico de productor/consumidor, luego vamos a usar pub/sub y vamos a terminar con RPC para demostrar como estos patrones  de mensajería pueden ayudarnos a construir sistemas robustos y confiables en node.js.\u003C/p\u003E",
+    "room": "Room 3",
+    "time": "11:00"
+  }
+  
+}
+"><div class="speaker__img__wrapper"><img class="speaker__img" src="images/609c5df88669d6a3c7d071204038df90_TNqOkiI.jpg" alt="David Roncancio" width="184" height="137"></div><h3 class="speaker__name">David Roncancio</h3><p class="speaker__talk">Microservices with node using rabbitmq</p><a class="speaker__twitter" target="_blank" href="//twitter.com/kuryaki"><span class="icon-twitter"></span> @kuryaki</a></div></div></section></section><section id="cont-agenda" class="cont-agenda"><h2 class="main__title">
+    Agenda
+  </h2><div id="agenda" class="agenda"></div></section><section id="venue" class="venue" data-hotels="[{&quot;description&quot;: &quot;&lt;p&gt;There will be free transportation provided &lt;strong&gt;leaving at 7:45 am from the Diez Hotel&lt;/strong&gt;  to and from RutaN, conference venue. &lt;/p&gt;\n&lt;p&gt;Tip: If you enter Colombia with a PIP5 (tourist) entry stamp on your passport, you are exempt from paying 16% VAT (Taxes) charge on your hotel stay. You should not be charged VAT on your hotel night, and please make sure when checking in this is referenced.&lt;/p&gt;\n&lt;p&gt;If you have any further hotel questions, email us at hola@jsconf.co. See you soon!&lt;/p&gt;\n&lt;p&gt;Approximate cost: $90 USD/night&lt;/p&gt;&quot;, &quot;image&quot;: &quot;/media/cache/5f/1f/5f1f4f192e01e0b68b5cdfed0b4d3785.png&quot;, &quot;accommodations&quot;: [{&quot;capacity&quot;: &quot;&quot;, &quot;name&quot;: &quot;Diez Hotel&quot;, &quot;value&quot;: &quot;Aprox. $90 USD/night&quot;}], &quot;phone&quot;: &quot;+57 4 448 1034&quot;, &quot;link&quot;: &quot;http://en.diezhotel.com/&quot;, &quot;reservationLink&quot;: &quot;http://en.diezhotel.com/&quot;, &quot;address&quot;: &quot;Calle 10A # 34-11, El Poblado, Medell\u00edn&quot;, &quot;name&quot;: &quot;Diez Hotel&quot;, &quot;longitude&quot;: -75.5652563, &quot;isMain&quot;: true, &quot;reservationCode&quot;: &quot;JSCONFCO&quot;, &quot;latitude&quot;: 6.2089366, &quot;tripAdvisorLink&quot;: &quot;https://www.tripadvisor.com/Hotel_Review-g297478-d1902691-Reviews-Diez_Hotel_Categoria_Colombia-Medellin_Antioquia_Department.html&quot;},{&quot;description&quot;: &quot;&lt;p&gt;There will be free transportation provided &lt;strong&gt;leaving at 7:45 am from the Diez Hotel&lt;/strong&gt;  to and from RutaN, conference venue. Geo Hostel is a 2 minutes walk to Diez Hotel. &lt;/p&gt;\n&lt;p&gt;Tip: If you enter Colombia with a PIP5 (tourist) entry stamp on your passport, you are exempt from paying 16% VAT (Taxes) charge on your hotel stay. You should not be charged VAT on your hotel night, and please make sure when checking in this is referenced.&lt;/p&gt;\n&lt;p&gt;If you have any further hotel questions, email us at hola@jsconf.co. See you soon!&lt;/p&gt;\n&lt;p&gt;Approximate cost: $10 USD (a bed)/night.&lt;/p&gt;&quot;, &quot;image&quot;: &quot;/media/cache/0c/6a/0c6ace0c29207005f38dc008eafe249f.png&quot;, &quot;accommodations&quot;: [{&quot;capacity&quot;: &quot;&quot;, &quot;name&quot;: &quot;Geo Hostel&quot;, &quot;value&quot;: &quot;Aprox. $15 USD/night&quot;}], &quot;phone&quot;: &quot;+57 4 311 7150&quot;, &quot;link&quot;: &quot;http://geohostel.com/&quot;, &quot;reservationLink&quot;: &quot;http://geohostel.com/site/eng/reservations.html&quot;, &quot;address&quot;: &quot;Carrera 35 8A-58, Medell\u00edn&quot;, &quot;name&quot;: &quot;Geo Hostel&quot;, &quot;longitude&quot;: -75.5657153, &quot;isMain&quot;: false, &quot;reservationCode&quot;: &quot;JSCONFCO&quot;, &quot;latitude&quot;: 6.208373, &quot;tripAdvisorLink&quot;: &quot;https://www.tripadvisor.com/Hotel_Review-g297478-d1784188-Reviews-Geo_Hostel-Medellin_Antioquia_Department.html&quot;},{&quot;description&quot;: &quot;&lt;p&gt;There will be free transportation provided &lt;strong&gt;leaving at 7:45 am from the Diez Hotel&lt;/strong&gt;  to and from RutaN, conference venue. Hotel Casa Le Fleur is a 5 minutes walk to the Diez Hotel. &lt;/p&gt;\n&lt;p&gt;Tip: If you enter Colombia with a PIP5 (tourist) entry stamp on your passport, you are exempt from paying 16% VAT (Taxes) charge on your hotel stay. You should not be charged VAT on your hotel night, and please make sure when checking in this is referenced.&lt;/p&gt;\n&lt;p&gt;If you have any further hotel questions, email us at hola@jsconf.co. See you soon!&lt;/p&gt;\n&lt;p&gt;Approximate cost: $40 USD/night&lt;/p&gt;&quot;, &quot;image&quot;: &quot;/media/cache/54/44/5444dc2c3767fd77e3e0a2c10deba6eb.png&quot;, &quot;accommodations&quot;: [{&quot;capacity&quot;: &quot;&quot;, &quot;name&quot;: &quot;Hotel Casa Le Fleur&quot;, &quot;value&quot;: &quot;Aprox. $40 USD/night&quot;}], &quot;phone&quot;: &quot;+57 4 311 1032&quot;, &quot;link&quot;: &quot;&quot;, &quot;reservationLink&quot;: &quot;http://www.booking.com/hotel/co/casa-la-fleur.html?aid=304142;label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmcgV1c19ueYgBAZgBMbgBB8gBDNgBAegBAfgBAqgCAw;sid=2e9b1c95da3eb8fc86169b6827ad8055;;bhh=1&quot;, &quot;address&quot;: &quot;Carrera 35 #7 - 72, El Poblado, Medellin&quot;, &quot;name&quot;: &quot;Hotel Casa Le Fleur&quot;, &quot;longitude&quot;: -75.5677438, &quot;isMain&quot;: false, &quot;reservationCode&quot;: &quot;n/a&quot;, &quot;latitude&quot;: 6.2066979, &quot;tripAdvisorLink&quot;: &quot;https://www.tripadvisor.com/Hotel_Review-g297478-d10644347-Reviews-Casa_la_Fleur_Hotel-Medellin_Antioquia_Department.html&quot;},{&quot;description&quot;: &quot;&lt;p&gt;There will be free transportation provided &lt;strong&gt;leaving at 7:45 am from the Diez Hotel&lt;/strong&gt;  to and from RutaN, conference venue. InHouse is a 4 minutes walk to the Diez Hotel. &lt;/p&gt;\n&lt;p&gt;Tip: If you enter Colombia with a PIP5 (tourist) entry stamp on your passport, you are exempt from paying 16% VAT (Taxes) charge on your hotel stay. You should not be charged VAT on your hotel night, and please make sure when checking in this is referenced.&lt;/p&gt;\n&lt;p&gt;If you have any further hotel questions, email us at hola@jsconf.co. See you soon!&lt;/p&gt;\n&lt;p&gt;Approximate cost: $60 USD/night&lt;/p&gt;&quot;, &quot;image&quot;: &quot;/media/cache/b1/61/b161a6b388243ef470b05018d84386b4.png&quot;, &quot;accommodations&quot;: [], &quot;phone&quot;: &quot;+57 4 444 1786&quot;, &quot;link&quot;: &quot;http://www.inhousethehotel.com/&quot;, &quot;reservationLink&quot;: &quot;http://www.inhousethehotel.com/#!booking/c1d94&quot;, &quot;address&quot;: &quot;Cra 34 No. 7 - 109. V\u00eda Provenza.&quot;, &quot;name&quot;: &quot;InHouse&quot;, &quot;longitude&quot;: -75.5673298, &quot;isMain&quot;: false, &quot;reservationCode&quot;: &quot;JSCONFCO&quot;, &quot;latitude&quot;: 6.2069761, &quot;tripAdvisorLink&quot;: &quot;https://www.tripadvisor.com/Hotel_Review-g297478-d2069675-Reviews-In_House-Medellin_Antioquia_Department.html&quot;}]"><div class="text-centered"><h2 class="main__title">Venue</h2></div><div class="map-group"><article class="venue__info"><h3>Ruta N</h3><div class="venue__info__address">Calle 67 No. <i class="br"></i> 52 - 20</div><div class="venue__info__city">Medellín.Col</div><a class="venue__link" href="http://www.rutanmedellin.org" target="_blank">website</a></article><div id="map" class="venue__map"></div><aside class="venue__hotels" id="hotels-list"></aside></div></section><section id="links" class="links"><div class="text-centered"><h2 class="main__title">More Information</h2><div class="links__list"><a class="links__link" href="/2015-Videos/">2015 Videos</a><a class="links__link" href="/FAQ/">FAQ</a><a class="links__link" href="/code-of-conduct/">The JSConf™ Code of Conduct</a><a class="links__link" href="/guide-Medellin/">Guide/ Guia re: Medellin</a><a class="links__link" href="/raffle-front-end-masters/">Front End Masters membership raffle script</a><a class="links__link" href="/scholarships/">Diversity Scholarships</a><a class="links__link" href="/workshops-settings/">Workshops Settings</a><a class="links__link" href="/workshops/">Workshops Registration Instructions</a><a class="links__link" href="https://drive.google.com/file/d/0BxGSDm2E_IXmMHk3ZmY4aFIwQVk/view" target="_blank">Prospectus PDF</a></div></div></section><section id="sponsors" class="sponsors"><div class="container--sponsors"><div class="text-centered"><h2 class="main__title">Sponsors</h2></div><div class="col sponsor-group--gold"><h3><span>Gold</span></h3><a class="sponsor" href="https://strongloop.com/" target="_blank" data-detail="{"about": "At StrongLoop, an IBM company, we don’t just build products for Node, we help create it. StrongLoop was founded in 2013 by Node and io.js core committers Bert Belder and Ben Noordhuis. StrongLoop now maintains over 130 open source npm modules and sponsors the popular LoopBack and Express frameworks. We also offer IBM API Connect, a complete solution that offers comprehensive capabilities to create, run, manage, secure and monetize APIs and microservices.", "image": "/media/cache/f1/c4/f1c431d386999909ba70594a33dd94b6.png", "name": "StrongLoop", "url": "https://strongloop.com/", "sponsorship": "", "twitter": "@StrongLoop"}"><img src="images/f1c431d386999909ba70594a33dd94b6.png" alt="StrongLoop"></a><a class="sponsor" href="http://rutanmedellin.org/" target="_blank" data-detail="{"about": "RutaN es una corporación creada por la Alcaldía de Medellín, UNE y EPM que facilita la evolución económica de la ciudad hacia negocios intensivos en ciencia, tecnología e innovación, de forma incluyente y sostenible. Su principal objetivo al año 2021, es posicionar a Medellín como la ciudad más innovadora de América Latina.", "image": "/media/cache/0a/3e/0a3e2f72960fb3cf89791911ea15c6ef.png", "name": "RutaN", "url": "http://rutanmedellin.org/", "sponsorship": "", "twitter": "ruta_N"}"><img src="images/0a3e2f72960fb3cf89791911ea15c6ef.png" alt="RutaN"></a><a class="sponsor" href="http://monoku.com" target="_blank" data-detail="{"about": "In Monoku we have a huge motivation: Change the world and make a positive impact in people\u0026#39\u003Bs lives by creating awesome digital products. We are a company in which we not only help big enterprises, startups and friends but also we see team work as an essential piece of what we do. That\u0026#39\u003Bs why you\u0026#39\u003Bll find us sharing a lot of fun experiences in the office and out of it, because a strong team achieves the impossible.", "image": "/media/cache/ae/3f/ae3f0f9d78f3967be2c785cffbd53613.png", "name": "Monoku", "url": "http://monoku.com", "sponsorship": "", "twitter": "monoku"}"><img src="images/ae3f0f9d78f3967be2c785cffbd53613.png" alt="Monoku"></a></div><div class="sponsor-group--silver"><h3><span>Silver</span></h3><a class="sponsor" href="https://www.toptal.com/" target="_blank" data-detail="{"about": "Toptal is an exclusive network for the top freelance developers and designers from all over the world. Toptalers often travel the world and get sponsored to attend \u0026amp\u003B speak at tech conferences, all while we find them work on intriguing projects with amazing clients like Airbnb and Zendesk.", "image": "/media/cache/20/95/20957e910884de17c0fd881f37b8c6b4.png", "name": "Toptal", "url": "https://www.toptal.com/", "sponsorship": "", "twitter": "@toptal"}"><img src="images/20957e910884de17c0fd881f37b8c6b4.png" alt="Toptal"></a><a class="sponsor" href="http://pslcorp.com" target="_blank" data-detail="{"about": "PSL is a Colombian software development company with offices in Medellin, Bogotá, Mexico City and the US. Our customers range from many Silicon Valley startups to Fortune 500 companies. We work with many Front End technologies to accomplish world\u002Dclass level development and are eager to support all efforts to make Medellin the Latinoamerican capital of Javascript!", "image": "/media/cache/96/46/9646597f3c47b98b3e096162345ac4d5.png", "name": "PSL", "url": "http://pslcorp.com", "sponsorship": "", "twitter": "PSLLatam"}"><img src="images/9646597f3c47b98b3e096162345ac4d5.png" alt="PSL"></a><a class="sponsor" href="http://domicilios.com" target="_blank" data-detail="{"about": "Domicilios.com es la plazoleta de comida online más grande de la Zona Andina con más de 3.900 restaurantes activos y presencia en Colombia, Perú y Ecuador. Contamos con más de 320 empleados y presencia en más de 20 ciudades. Con más de 2M de usuarios y con 4 años en el mercado, nos consolidamos como la app #1 para pedir comida a domicilio y uno de los emprendimientos nacionales de mayor crecimiento en Colombia.", "image": "/media/cache/e8/58/e858daf354c9cde6f677882e165f05a2.png", "name": "Domicilios.com", "url": "http://domicilios.com", "sponsorship": "", "twitter": "@DomiciliosCol"}"><img src="images/e858daf354c9cde6f677882e165f05a2.png" alt="Domicilios.com"></a><a class="sponsor" href="http://astoundcommerce.com/" target="_blank" data-detail="{"about": "Astound Commerce is excited to participate in JSCONF Colombia. We are new neighbors here in Medellin, having just opened an office as part of our global network of talent. For the past 15 years, we’ve been delivering enhanced digital shopping experiences to some of the world’s most vibrant, successful brands, helping them engage and delight their customers. We’re actively recruiting the best and brightest engineers to fill our Medellin offices. Come and see us…we’d love to meet you.", "image": "/media/cache/9b/d5/9bd5f783833d4267a4db9703a4325ec6.png", "name": "Astound Commerce", "url": "http://astoundcommerce.com/", "sponsorship": "", "twitter": "@AstoundCommerce"}"><img src="images/9bd5f783833d4267a4db9703a4325ec6.png" alt="Astound Commerce"></a></div><div class="sponsor-group--silver"><h3><span>Startup</span></h3><a class="sponsor" href="http://www.netcentric.biz" target="_blank" data-detail="{"about": "We are a young, international company with Swiss roots, who has become Europe’s leading Adobe Marketing Cloud solutions provider. The Netcentric team currently counts 260 people and is growing every day. Our office locations span five different nations in Europe: Switzerland, Spain, Germany, the United Kingdom, Romania and now we are coming to Colombia. In all these offices, you will find our diverse culture that embraces over 35 different nationalities from around the globe. We’ve accomplished all of this in just under four years, all while maintaining our start\u002Dup spirit and living a non\u002Dtraditional operating system, Holacracy. \u003Cbr /\u003E\u003Cbr /\u003EFor more information take a look at our website: http://www.netcentric.biz/ See our Careers section and Come Join Us!", "image": "/media/cache/03/12/0312feb888d0273d5ef1077475400712.png", "name": "NetCentric", "url": "http://www.netcentric.biz", "sponsorship": "", "twitter": "@NetcentricHQ"}"><img src="images/0312feb888d0273d5ef1077475400712.png" alt="NetCentric"></a><a class="sponsor" href="http://uruit.com/" target="_blank" data-detail="{"about": "We’re a software development firm focused on building great web and mobile apps since 2007.\u003Cbr /\u003E\u003Cbr /\u003EWe strongly believe output isn’t the ultimate goal. It’s what we build and its impact what matters hence, we love to create successful designs that give users meaningful experiences.\u003Cbr /\u003E\u003Cbr /\u003EWe master latest front\u002Dend technologies and we choose interesting and challenging projects. For us, agile is a culture, authenticity, independence and transparency are core values and code quality is as natural as breathing.\u003Cbr /\u003E\u003Cbr /\u003EOur headquarters are in Uruguay, we have offices in US and just opened a new branch in Colombia.\u003Cbr /\u003E\u003Cbr /\u003EWe keep expanding and we are looking for restless, driven people who believe the world deserves high\u002Dquality apps!\u003Cbr /\u003E\u003Cbr /\u003E\u003Cbr /\u003ESend us your CV at  https://uruit.workable.com\u003Cbr /\u003E\u003Cbr /\u003E \u003Cbr /\u003E\u003Cbr /\u003E ", "image": "/media/cache/5b/db/5bdb80842d01ca4009ec3e56062c9527.png", "name": "UruIT", "url": "http://uruit.com/", "sponsorship": "", "twitter": "@UruIT"}"><img src="images/5bdb80842d01ca4009ec3e56062c9527.png" alt="UruIT"></a><a class="sponsor" href="https://www.turing.io" target="_blank" data-detail="{"about": "We turn great people into outstanding developers in 7 months. 96% of graduates are employed as full\u002Dtime developers within 120 days of graduation.", "image": "/media/cache/a9/89/a989c16303372a2103c1f0620ad31b14.png", "name": "Turing School of Software &amp; Design", "url": "https://www.turing.io", "sponsorship": "", "twitter": "turingschool"}"><img src="images/a989c16303372a2103c1f0620ad31b14.png" alt="Turing School of Software &amp; Design"></a></div><div class="sponsor-group--silver"><h3><span>Diversity Partner</span></h3><a class="sponsor" href="http://github.com" target="_blank" data-detail="{"about": "GitHub is how people build software. We’re supporting a community where more than 15 million people learn, share, and work together to build software.", "image": "/media/cache/69/d2/69d2ecbf499b2c469aaaff8dbd202ca4.png", "name": "GitHub", "url": "http://github.com", "sponsorship": "", "twitter": "@GitHubCommunity @github"}"><img src="images/69d2ecbf499b2c469aaaff8dbd202ca4.png" alt="GitHub"></a></div><div class="text-centered extra-action__intro">Interested in sponsoring JSConf Colombia? </div><a class="sponsors__sponsor-jsconf" href="https://drive.google.com/open?id=0BxGSDm2E_IXmMHk3ZmY4aFIwQVk" target="_blank">Sponsor JSConf Colombia 2016</a></div></section><div class="made-with-love" id="with-love"><div class="text-centered"><img class="heart" src="fonts/heart.d9f2517eaa62.svg" alt=""><p>JSConf Colombia is organized 
+			<i>with lots of love</i> by
+		</p></div><ul class="organizers"><li class="organizer" data-speaker-info="{"name": "Adrian Estrada", "image": "/media/cache/ca/f9/caf94039cbeab4f5564a3414d554e4b8.jpg", "twitter": "edsadr"}"><img src="images/f549c5afda38ea66151fc9e666598ead.png" alt="Adrian Estrada" class="organizer__img"><div class="organizer__info"><div class="organizer__name">Adrian Estrada</div></div></li><li class="organizer" data-speaker-info="{"name": "Juliana Diaz", "image": "/media/cache/fa/9f/fa9f8d5f6f11411355235b64ab6ded12.jpg", "twitter": "naranjitagolden"}"><img src="images/cd58912c97a21d9a920a31f1eac37393.png" alt="Juliana Diaz" class="organizer__img"><div class="organizer__info"><div class="organizer__name">Juliana Diaz</div></div></li><li class="organizer" data-speaker-info="{"name": "David Avellaneda", "image": "/media/cache/dc/2d/dc2d500a1c44071a5839280e3ac7ff0c.jpg", "twitter": "davsket"}"><img src="images/c6f54e2d844448ebc735467d15a618e5.png" alt="David Avellaneda" class="organizer__img"><div class="organizer__info"><div class="organizer__name">David Avellaneda</div></div></li><li class="organizer" data-speaker-info="{"name": "Catherine Lopez", "image": "/media/cache/46/d8/46d80fcabfa0ff094caa30a4cb823092.jpg", "twitter": "lopezcatherine"}"><img src="images/3f3117d23fbfc1b46832e2a5b05ca1a4.png" alt="Catherine Lopez" class="organizer__img"><div class="organizer__info"><div class="organizer__name">Catherine Lopez</div></div></li></ul></div><footer class="main-footer"><div class="container"><svg class="footer__logo" width="136" height="136" viewbox="0 0 136 136"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logotipo"/></svg><p class="footer__text-cod">We adopt and enforce the <a href="/code-of-conduct/">JSConf Code of Conduct</a> for all of our community events.</p><p>JSConf Colombia is <strong>non-profit</strong> community conference organized by <strong>volunteers</strong> of the ColJS community. ColJS is a "passion driven organization" working to promote JavaScript and its community grow in Colombia.</p><a class="main-footer__email" href="mailto:hola@jsconf.co">hola@jsconf.co</a><div class="footer__social"><a class="icon-twitter main-footer__social-link" target="_blank" href="https://twitter.com/jsconfco"></a><a class="icon-social-facebook main-footer__social-link main-footer__social-link--fb" target="_blank" href="https://www.facebook.com/JSConfCo"></a></div></div></footer><script src="js/vendor.64dcb65f825d.js"></script><script src="js/main.5c079fb94edf.js"></script></body></html>

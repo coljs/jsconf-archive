@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Poppins Light'), local('Poppins-Light'), url(../fonts/D2gN9uyZ9Ucx1fJ1Fhb7sy3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(../fonts/zO07Oxe3SOlw0l2YX2sdIS3USBnSvpkopQaUR-2r7iU.ttf) format('truetype');
+}
